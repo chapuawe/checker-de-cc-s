@@ -2,11 +2,10 @@
 Este proyecto fue creado para Legion Holk Gold y Legion Holk Hackers , el unico autor es Zack Dasti (Chapuawe) con apoyo de Alex LR
 
 # Uso :
-python checker.py (cc) (año) (mes) (cvv)
+python checker.py (archivo txt con ccs)
 
 # Ejemplo:
-python checker.py 5318076218402036 2018 6 793
-(la cc fue generada con elfqrin)
+python checker.py cc-s.txt
 
 # Requerimentos :
 1- tener python version 2.x.x
@@ -17,5 +16,5 @@ python checker.py 5318076218402036 2018 6 793
 2- no tiene plataforma web  
 
 # Nota: 
-el año se pone completo , ejemplo: 2016 
-el mes se pone sin "0" , mal = 06 , bien = 6
+tienes que eliminar el 0 al principio del mes en todas las ccs , las ccs las puedes generar con cc.namsopro.com
+tiene un limite de checkear hasta 50 ccs
