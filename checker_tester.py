@@ -52,6 +52,60 @@ ccs = open(lista ,'r')
 while contador <= 50:
 
 	cc, mes, ano, cvv = ccs.next().rstrip("\n").split("|")
+	
+	if (mes == "09"):
+		mes = mes.strip("0")
+
+	else:
+		pass
+
+	if (mes == "08"):
+		mes = mes.strip("0")
+
+	else:
+		pass
+
+	if (mes == "07"):
+		mes = mes.strip("0")
+
+	else:
+		pass
+
+	if (mes == "06"):
+		mes = mes.strip("0")
+
+	else:
+		pass
+
+	if (mes == "05"):
+		mes = mes.strip("0")
+
+	else:
+		pass
+
+	if (mes == "04"):
+		mes = mes.strip("0")
+
+	else:
+		pass
+
+	if (mes == "03"):
+		mes = mes.strip("0")
+
+	else:
+		pass
+
+	if (mes == "02"):
+		mes = mes.strip("0")
+
+	else:
+		pass
+
+	if (mes == "01"):
+		mes = mes.strip("0")
+
+	else:
+		pass
 
 	response = br.open('https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=5&continue=Continuar')
 	urlchecker = 'https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=5&continue=Continuar'

