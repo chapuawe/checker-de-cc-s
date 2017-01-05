@@ -13,7 +13,7 @@ import sys
 #cvv = sys.argv[4]
 
 print "\n"
-print "                    	Checker Version Beta 0.4.0 \n";
+print "                    	Checker Version Beta 0.4.5 \n";
 
 print "	  88   88   .d8b.   NNNNNN  88       	88      88    88";
 print "	  88, ,88  d8' '8b    88    88       	88      88,  ,88 ";
