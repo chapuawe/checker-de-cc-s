@@ -22,7 +22,7 @@ print "	  88   88  88~~~88    88    88b      	88b     88    88  ";
 print "	  88   88  88   88  NNNNNN  88NNNN   	88NNNN  88    88  ";
 
 print "	  ======================================================\n\n";
-print "		  Uso: python checker.py cc ano mes cvv\n\n";
+print "		      Uso: python checker.py archivo.txt\n\n";
 
 br = mechanize.Browser()
 response = br.open('https://fondeadora.mx/login.html')
