@@ -5,7 +5,7 @@ Este proyecto fue creado para Legion Holk Gold y Legion Holk Hackers , el unico 
 python checker.py (archivo txt con ccs) (email de fondeadora) (contraseña de fondeadora)
 
 # Ejemplo:
-python checker.py cc-s.txt
+python checker.py cc-s.txt example@example.com example
 
 # Requerimentos :
 1- tener python version 2.x.x
