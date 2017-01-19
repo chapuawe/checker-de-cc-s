@@ -72,59 +72,10 @@ while contador <= limite :
 	except:
 		print "  El Checker Ha Terminado :D Disfruta tus lives o dies :)"
 
-	if (mes == "09"):
-		mes = mes.strip("0")
-
-	else:
+	if (mes == "10"):
 		pass
-
-	if (mes == "08"):
-		mes = mes.strip("0")
-
 	else:
-		pass
-
-	if (mes == "07"):
-		mes = mes.strip("0")
-
-	else:
-		pass
-
-	if (mes == "06"):
-		mes = mes.strip("0")
-
-	else:
-		pass
-
-	if (mes == "05"):
-		mes = mes.strip("0")
-
-	else:
-		pass
-
-	if (mes == "04"):
-		mes = mes.strip("0")
-
-	else:
-		pass
-
-	if (mes == "03"):
-		mes = mes.strip("0")
-
-	else:
-		pass
-
-	if (mes == "02"):
-		mes = mes.strip("0")
-
-	else:
-		pass
-
-	if (mes == "01"):
-		mes = mes.strip("0")
-
-	else:
-		pass
+		mes = mes.stripe("0")
 
 	try:
 		response = br.open('https://fondeadora.mx/projects/animalpolitico/backers/new?reward=0&backing_amount=0.50&continue=Continuar')
